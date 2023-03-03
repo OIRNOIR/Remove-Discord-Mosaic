@@ -1,16 +1,16 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "id": "dev.oirnoir.RemoveDiscordMosaic",
+  "name": "Remove Discord Image Mosaic",
+  "description": "A theme to remove Discord's new image mosaic",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "OIRNOIR",
+    "discordID": "720842469024989195",
+    "github": "oirnoir"
   },
-  "version": "1.0.0",
+  "version": "0.0.1",
   "updater": {
     "type": "github",
-    "id": "replugged-org/plugin-template"
+    "id": "oirnoir/remove-discord-mosaic"
   },
   "license": "MIT",
   "type": "replugged-plugin",

@@ -1,3 +1,11 @@
-# Replugged plugin template
+# Remove Discord Mosaic
 
-See the [plugin development guide](https://guide.replugged.dev/docs/plugins/getting-started) for more information on using this template.
+A plugin for Replugged that removes the Discord image mosaic
+
+Install: https://replugged.dev/install?identifier=oirnoir/remove-discord-mosaic&source=github
+
+## NOTE: This plugin is currently in alpha
+
+Commission made by OIRNOIR#0032 for TheShadow#8124
+
+Some code by Teltta#2064

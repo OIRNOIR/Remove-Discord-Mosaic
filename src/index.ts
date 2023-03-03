@@ -1,26 +1,30 @@
-import { Injector, Logger, webpack } from "replugged";
+import { common, Injector, settings, webpack } from "replugged";
+import { AnyFunction } from "replugged/dist/types";
+import "./style.css";
 
 const inject = new Injector();
-const logger = Logger.plugin("PluginTemplate");
+const { React } = common;
 
 export async function start(): Promise<void> {
-  const typingMod = await webpack.waitForModule<{
-    startTyping: (channelId: string) => void;
-  }>(webpack.filters.byProps("startTyping"));
-  const getChannelMod = await webpack.waitForModule<{
-    getChannel: (id: string) => {
-      name: string;
-    };
-  }>(webpack.filters.byProps("getChannel"));
+  const observer = new MutationObserver((mutationsList, observer) => {
+		[...mutationsList].forEach(mutation => {
+			for (const element of Array.from(mutation.addedNodes).filter(n => n.nodeName == "STYLE").length > 0) {
 
-  if (typingMod && getChannelMod) {
-    inject.instead(typingMod, "startTyping", ([channel]) => {
-      const channelObj = getChannelMod.getChannel(channel);
-      logger.log(`Typing prevented! Channel: #${channelObj?.name ?? "unknown"} (${channel}).`);
-    });
-  }
+			}
+		});
+	});
+
+	new MutationObserver((m) => [...m].forEach((mutation) => {
+		if (mutation.target.nodeName == "STYLE" || Array.from(mutation.addedNodes).filter(n => n.nodeName == "STYLE").length > 0 || Array.from(mutation.removedNodes).filter(n => n.nodeName == "STYLE").length > 0) {
+
+		}
+	})).observe(document.head, {
+		attributes: true,
+		childList: true,
+		subtree: true
+	});
 }
 
 export function stop(): void {
-  inject.uninjectAll();
+  
 }

@@ -1,7 +1,7 @@
 {
-  "name": "plugin-template",
-  "version": "1.0.0",
-  "description": "A plugin template",
+  "name": "remove-discord-mosaic",
+  "version": "0.0.1",
+  "description": "A theme to remove Discord's new image mosaic",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -18,7 +18,7 @@
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "OIRNOIR",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.2",
