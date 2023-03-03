@@ -1,4 +1,9 @@
+import { common, Injector, settings, webpack } from "replugged";
+import { AnyFunction } from "replugged/dist/types";
 import "./style.css";
+
+const inject = new Injector();
+const { React } = common;
 
 let observer : MutationObserver, observer2 : MutationObserver, observer3 : MutationObserver;
 
@@ -8,7 +13,7 @@ function fixElement(element : Element) {
 		const src = img.getAttribute("src");
 		if (src == null) continue;
 		let splitSrc = src.split("?");
-		const newSrc = splitSrc.shift() + "?size=1024";
+		const newSrc = splitSrc.shift();
 		if (newSrc == null) continue;
 		img.setAttribute("src", newSrc);
 		img.setAttribute("rdm-old-params", splitSrc.join("?"));
@@ -32,11 +37,7 @@ function unfixAll() {
 export async function start(): Promise<void> {
   observer = new MutationObserver((mutationsList, observer) => {
 		[...mutationsList].forEach(mutation => {
-			console.log(mutation);
-			let debugIterations = 0;
 			for (const child of document.querySelectorAll('ol[data-list-id="chat-messages"]')[0].children) {
-				debugIterations++;
-				console.log("debug: " + debugIterations);
 				fixElement(child);
 			}
 		});
@@ -117,6 +118,7 @@ export async function start(): Promise<void> {
 }
 
 export function stop(): void {
+	inject.uninjectAll();
   observer.disconnect();
   observer2.disconnect();
   observer3.disconnect();
