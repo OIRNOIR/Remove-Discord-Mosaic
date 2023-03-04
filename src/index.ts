@@ -1,9 +1,5 @@
-import { common, Injector, settings, webpack } from "replugged";
-import { AnyFunction } from "replugged/dist/types";
+import Replugged from "replugged";
 import "./style.css";
-
-const inject = new Injector();
-const { React } = common;
 
 let observer : MutationObserver, observer2 : MutationObserver, observer3 : MutationObserver;
 
@@ -17,7 +13,6 @@ function fixElement(element : Element) {
 		if (newSrc == null) continue;
 		img.setAttribute("src", newSrc);
 		img.setAttribute("rdm-old-params", splitSrc.join("?"));
-		console.log("Fixed element", img);
 	}
 }
 
@@ -118,7 +113,6 @@ export async function start(): Promise<void> {
 }
 
 export function stop(): void {
-	inject.uninjectAll();
   observer.disconnect();
   observer2.disconnect();
   observer3.disconnect();
