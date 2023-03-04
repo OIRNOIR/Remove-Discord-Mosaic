@@ -1,6 +1,6 @@
 {
   "name": "remove-discord-mosaic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A theme to remove Discord's new image mosaic",
   "engines": {
     "node": ">=14.0.0"
