@@ -45,6 +45,7 @@ export async function start(): Promise<void> {
 	let start = Date.now();
 	const interval : NodeJS.Timer = setInterval(async () => {
 		if (disabled) return clearInterval(interval);
+		// Credit to Alyxia#4650 for the basic method
 		const mediaMosaicExperiment = await replugged.webpack.waitForModule(replugged.webpack.filters.bySource(/media_mosaic/)) as MediaMosaicExperiment;
 		if (mediaMosaicExperiment.Z.getCurrentConfig().enabled == false && Date.now() - start > 10000) {
 			clearInterval(interval);
