@@ -1,5 +1,5 @@
-import Replugged from "replugged";
-import "./style.css";
+import replugged from "replugged";
+/*import "./style.css";
 
 let observer : MutationObserver, observer2 : MutationObserver, observer3 : MutationObserver;
 
@@ -28,9 +28,30 @@ function unfixAll() {
 		console.log("Unfixed element", img);
 	}
 }
+*/
+
+let disabled = false;
+
+type MediaMosaicExperiment = {Z: MediaMosaicExperimentZ};
+type GetCurrentConfigFunction = () => MediaMosaicExperimentCurrentConfig;
+type MediaMosaicExperimentCurrentConfig = {enabled: boolean};
+
+interface MediaMosaicExperimentZ {
+	getCurrentConfig: GetCurrentConfigFunction;
+}
 
 export async function start(): Promise<void> {
-  observer = new MutationObserver((mutationsList, observer) => {
+	disabled = false;
+	let start = Date.now();
+	const interval : NodeJS.Timer = setInterval(async () => {
+		if (disabled) return clearInterval(interval);
+		const mediaMosaicExperiment = await replugged.webpack.waitForModule(replugged.webpack.filters.bySource(/media_mosaic/)) as MediaMosaicExperiment;
+		if (mediaMosaicExperiment.Z.getCurrentConfig().enabled == false && Date.now() - start > 10000) {
+			clearInterval(interval);
+		}
+		mediaMosaicExperiment.Z.getCurrentConfig().enabled = false;
+	}, 1000);
+  /*observer = new MutationObserver((mutationsList, observer) => {
 		[...mutationsList].forEach(mutation => {
 			for (const child of document.querySelectorAll('ol[data-list-id="chat-messages"]')[0].children) {
 				fixElement(child);
@@ -109,12 +130,15 @@ export async function start(): Promise<void> {
 		}
 	}
 
-	reconnect3();
+	reconnect3();*/
 }
 
 export function stop(): void {
-  observer.disconnect();
+	disabled = true;
+	const mediaMosaicExperiment = replugged.webpack.getBySource(/media_mosaic/) as MediaMosaicExperiment;
+	mediaMosaicExperiment.Z.getCurrentConfig().enabled = true;
+  /*observer.disconnect();
   observer2.disconnect();
   observer3.disconnect();
-	unfixAll();
+	unfixAll();*/
 }
