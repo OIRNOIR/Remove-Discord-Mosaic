@@ -7,10 +7,10 @@
     "discordID": "720842469024989195",
     "github": "oirnoir"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "updater": {
-    "type": "github",
-    "id": "oirnoir/remove-discord-mosaic"
+    "type": "store",
+    "id": "dev.oirnoir.RemoveDiscordMosaic"
   },
   "license": "MIT",
   "type": "replugged-plugin",
