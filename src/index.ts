@@ -1,4 +1,6 @@
 import replugged from "replugged";
+
+// Some required code for the old observer method
 /*import "./style.css";
 
 let observer : MutationObserver, observer2 : MutationObserver, observer3 : MutationObserver;
@@ -43,7 +45,9 @@ interface MediaMosaicExperimentZ {
 export async function start(): Promise<void> {
 	disabled = false;
 	let start = Date.now();
-	const interval : NodeJS.Timer = setInterval(async () => {
+
+	// JS interval method (Old)
+	/*const interval : NodeJS.Timer = setInterval(async () => {
 		if (disabled) return clearInterval(interval);
 		// Credit to Alyxia#4650 for the basic method
 		const mediaMosaicExperiment = await replugged.webpack.waitForModule(replugged.webpack.filters.bySource(/media_mosaic/)) as MediaMosaicExperiment;
@@ -51,7 +55,9 @@ export async function start(): Promise<void> {
 			clearInterval(interval);
 		}
 		mediaMosaicExperiment.Z.getCurrentConfig().enabled = false;
-	}, 1000);
+	}, 1000);*/
+
+	// JS observer method (Old)
   /*observer = new MutationObserver((mutationsList, observer) => {
 		[...mutationsList].forEach(mutation => {
 			for (const child of document.querySelectorAll('ol[data-list-id="chat-messages"]')[0].children) {
@@ -136,8 +142,12 @@ export async function start(): Promise<void> {
 
 export function stop(): void {
 	disabled = true;
-	const mediaMosaicExperiment = replugged.webpack.getBySource(/media_mosaic/) as MediaMosaicExperiment;
-	mediaMosaicExperiment.Z.getCurrentConfig().enabled = true;
+
+	// JS interval method (Old)
+	/*const mediaMosaicExperiment = replugged.webpack.getBySource(/media_mosaic/) as MediaMosaicExperiment;
+	mediaMosaicExperiment.Z.getCurrentConfig().enabled = true;*/
+
+	// JS observer method (Old)
   /*observer.disconnect();
   observer2.disconnect();
   observer3.disconnect();
