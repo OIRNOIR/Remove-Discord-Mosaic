@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^2.8.8
     version: 2.8.8
   replugged:
-    specifier: ^4.4.2
-    version: 4.4.2(@codemirror/view@6.14.0)(@lezer/common@1.0.3)
+    specifier: ^4.5.1
+    version: 4.5.1(@codemirror/view@6.14.0)(@lezer/common@1.0.3)
   typescript:
     specifier: ^5.1.3
     version: 5.1.3
@@ -1817,7 +1817,7 @@ packages:
     dependencies:
       ansi-align: 3.0.1
       camelcase: 7.0.1
-      chalk: 5.2.0
+      chalk: 5.3.0
       cli-boxes: 3.0.0
       string-width: 5.1.2
       type-fest: 2.19.0
@@ -1906,8 +1906,8 @@ packages:
       supports-color: 7.2.0
     dev: true
 
-  /chalk@5.2.0:
-    resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
+  /chalk@5.3.0:
+    resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
@@ -3758,8 +3758,8 @@ packages:
       rc: 1.2.8
     dev: true
 
-  /replugged@4.4.2(@codemirror/view@6.14.0)(@lezer/common@1.0.3):
-    resolution: {integrity: sha512-aQA9aU7vHUly1+IvJvNTw13rfmJYgSm6CzBh9UZbYBzzRJN3OF+TwJQ55LNrFBzeNdJFrAeG2UYCXciX9Anarg==}
+  /replugged@4.5.1(@codemirror/view@6.14.0)(@lezer/common@1.0.3):
+    resolution: {integrity: sha512-X25mw7PhrGbbJYWKgXMYYRJoaak5vjTxQvLkYZHND1vW5kZDBJbsvtlzhxZew72jA1Pp3zJhtJLOkhfHwCdsVA==}
     engines: {node: '>=18.0.0', pnpm: '>=8.0.0'}
     hasBin: true
     dependencies:
@@ -3773,7 +3773,7 @@ packages:
       '@parcel/config-default': 2.9.3(@parcel/core@2.9.3)
       '@parcel/core': 2.9.3
       '@parcel/transformer-sass': 2.9.3(@parcel/core@2.9.3)
-      chalk: 5.2.0
+      chalk: 5.3.0
       codemirror: 6.0.1(@lezer/common@1.0.3)
       esbuild: 0.16.17
       node-fetch: 3.3.1
@@ -4184,7 +4184,7 @@ packages:
     engines: {node: '>=14.16'}
     dependencies:
       boxen: 7.1.0
-      chalk: 5.2.0
+      chalk: 5.3.0
       configstore: 6.0.0
       has-yarn: 3.0.0
       import-lazy: 4.0.0
