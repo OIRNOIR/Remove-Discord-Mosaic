@@ -7,7 +7,7 @@
     "discordID": "720842469024989195",
     "github": "oirnoir"
   },
-  "version": "1.0.7",
+  "version": "1.0.8",
   "updater": {
     "type": "store",
     "id": "dev.oirnoir.RemoveDiscordMosaic"
