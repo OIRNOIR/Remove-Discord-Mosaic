@@ -21,7 +21,7 @@
   "author": "OIRNOIR",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.16.18",
+    "@types/node": "^18.17.4",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "eslint": "^8.46.0",
