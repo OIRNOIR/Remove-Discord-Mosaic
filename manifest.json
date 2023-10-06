@@ -1,7 +1,7 @@
 {
   "id": "dev.oirnoir.RemoveDiscordMosaic",
   "name": "Remove Discord Image Mosaic",
-  "description": "A theme to remove Discord's new image mosaic",
+  "description": "A plugin to remove Discord's new image mosaic",
   "author": {
     "name": "OIRNOIR",
     "discordID": "720842469024989195",
