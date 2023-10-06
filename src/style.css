@@ -1,80 +1,18 @@
 /*
-	Code derived from a snippet by Teltta#2064
+	By loneweeb.tsx
 */
 
-[class*="ByOneGrid-"]/*:not([class*="OneGridSingle-"])*/,
-[class*="ByTwoGrid-"],
-[class*="ByThreeGrid-"] {
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
+[class^=nonMediaAttachmentsContainer-] [class^=hoverButtonGroup-] {
+	position: relative;
+	align-self: normal;
+	max-height: 32px;
+	max-width: 65px;
 }
 
-html body div[class*="ByOneGrid-"]/*:not([class*="OneGridSingle-"])*/ img[class*="lazyImg"],
-html body div[class*="ByTwoGrid-"] img[class*="lazyImg"],
-html body div[class*="ByThreeGrid-"] img[class*="lazyImg"] {
-	aspect-ratio: unset;
-  /* height: auto !important;
-  width: auto !important; */
-  margin-left: 0px !important;
-	max-height: 350px !important;
-	max-width: 100% !important;
+[class^=nonMediaAttachmentsContainer-] [class^=hoverButtonGroup-]:has(>:nth-child( n + 2 )) {
+	right: 68px;
 }
 
-html body div[class*="ByOneGrid-"]/*:not([class*="OneGridSingle-"])*/ [class*="video-"]:not([data-fullscreen="true"] *),
-html body div[class*="ByTwoGrid-"] [class*="video-"]:not([data-fullscreen="true"] *),
-html body div[class*="ByThreeGrid-"] [class*="video-"]:not([data-fullscreen="true"] *) {
-	aspect-ratio: unset;
-  /* height: auto !important;
-  width: auto !important; */
-  margin-left: 0px !important;
-	max-height: 350px !important;
-	max-width: 100% !important;
-	height: auto !important;
-	width: auto !important;
-}
-
-[class^="mediaAttachmentsContainer-"] [class*="messageAttachmentMediaMosaic-"] {
-  /* max-width: fit-content !important; */
-  max-width: 100% !important;
-	width: fit-content !important;
-}
-
-[class*="attachmentContentContainer-"] {
-	max-width: 100% !important;
-}
-
-[class*="mediaAttachmentsContainer-"] {
-  border-radius: 0px;
-}
-
-[class*="OneGridSingle-"] {
-  border-radius: 3px;
-}
-
-[class*="messageAttachmentFullWidth-"] {
-	-webkit-box-align: start;
-	align-items: start;
-}
-
-[class*="lazyImgContainer-"] {
-	margin: 0 !important;
-}
-
-[class*="threeByThreeGrid-"] [class*="lazyImg-"],
-[class*="threeByThreeGrid-"] [class*="lazyImgContainer"] {
-	aspect-ratio: unset;
-}
-
-[class*="ByOneGrid-"] *:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not([class*="messageAttachmentMediaMosaic-"]),
-[class*="ByTwoGrid-"] *:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not([class*="messageAttachmentMediaMosaic-"]),
-[class*="ByThreeGrid-"] *:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not([class*="messageAttachmentMediaMosaic-"]) {
-	width: unset !important;
-	height: unset !important;
-	max-width: unset !important;
-	max-height: unset !important;
-}
-
-[class*="messageAttachment-"] {
-	height: auto !important;
+[class^=nonMediaAttachmentsContainer-] [class^=hoverButtonGroup-]:not(:has(>:nth-child( n + 2 ))) {
+	right: 38px;
 }
