@@ -2,9 +2,7 @@
 
 A plugin for Replugged that removes the Discord image mosaic.
 
-Install: https://replugged.dev/install?identifier=oirnoir/remove-discord-mosaic&source=github
-
-Please restart your Discord client after installing.
+Install: https://replugged.dev/store/dev.oirnoir.RemoveDiscordMosaic
 
 Some code by teltta and alyxia.dev on Discord.
 
