@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "type": "replugged-plugin",
-	"plaintextPatches": "src/plaintextPatches.ts",
+	"renderer": "src/index.ts",
 	"reloadRequired": true,
 	"source": "https://github.com/OIRNOIR/Remove-Discord-Mosaic",
 	"image": "https://cdn.discordapp.com/attachments/1114428407816650802/1114428408127037530/Screenshot_2023-06-02_at_10.40.24_PM.png"
