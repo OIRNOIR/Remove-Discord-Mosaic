@@ -6,8 +6,6 @@ Install: https://replugged.dev/install?identifier=oirnoir/remove-discord-mosaic&
 
 Please restart your Discord client after installing.
 
-Commission made by oirnoir for 4shadowed on Discord.
-
 Some code by teltta and alyxia.dev on Discord.
 
 This plugin has a few bugs and issues, PRs are welcome.
