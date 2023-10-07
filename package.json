@@ -1,6 +1,6 @@
 {
   "name": "remove-discord-mosaic",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A theme to remove Discord's new image mosaic",
   "engines": {
     "node": ">=14.0.0"
@@ -21,10 +21,10 @@
   "author": "OIRNOIR",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.18.3",
+    "@types/node": "^18.18.4",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
-    "eslint": "^8.50.0",
+    "eslint": "^8.51.0",
     "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.33.2",
