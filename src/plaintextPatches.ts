@@ -16,7 +16,7 @@ export default [
 			},
 		],
 	},
-  {
+    {
 		find: ".downloadHoverButtonIcon",
 		replacements: [
 			{
@@ -25,7 +25,7 @@ export default [
 			},
 		],
 	},
-  {
+    {
 		find: "Media Mosaic",
 		replacements: [
 			{
