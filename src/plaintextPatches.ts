@@ -16,16 +16,16 @@ export default [
 			},
 		],
 	},
-  {
-		find: ".MediaLayoutType.MOSAIC",
+    {
+		find: ".downloadHoverButtonIcon",
 		replacements: [
 			{
-				match: /[\w_+]===\w+\.\w+\.MOSAIC/, //933629 594098
+				match: /[\w_+]===\w+\.\w+\.MOSAIC/, // X - 933629 594098  O - 994402
 				replace: "true",
 			},
 		],
 	},
-  {
+    {
 		find: "Media Mosaic",
 		replacements: [
 			{

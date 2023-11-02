@@ -2,7 +2,7 @@
 	By loneweeb.tsx
 */
 
-[class^=nonMediaAttachmentsContainer-] [class*=messageAttachment-] {
+[class^=nonMediaAttachmentsContainer] [class*=messageAttachment] {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -10,16 +10,16 @@
 	position: relative;
 }
 
-[class^=nonMediaAttachmentsContainer-] [class^=hoverButtonGroup-] {
+[class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup] {
 	position: absolute;   
 	align-self: normal;
 	max-height: 32px;
 	max-width: 65px;
 }
 
-[class^=nonMediaAttachmentsContainer-] [class^=hoverButtonGroup-]:has(>:nth-child( n + 2 )) {
+[class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup]:has(>:nth-child( n + 2 )) {
 	right: 6px;
 }
-[class^=nonMediaAttachmentsContainer-] [class^=hoverButtonGroup-]:not(:has(>:nth-child( n + 2 ))) {
+[class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup]:not(:has(>:nth-child( n + 2 ))) {
 	right: 4px;
 }
