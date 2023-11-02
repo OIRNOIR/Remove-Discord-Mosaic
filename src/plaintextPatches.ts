@@ -4,22 +4,32 @@ import { PlaintextPatch } from "replugged/dist/types";
 
 export default [
 	{
-		find: "Media Mosaic",
+		find: ".MEDIA_MOSAIC_MAX_HEIGHT",
 		replacements: [
 			{
-				match: /mediaLayoutType:\w+\.\w+\.MOSAIC/,
+				match: /mediaLayoutType:\w+\.\w+\.MOSAIC/, //377502
 				replace: 'mediaLayoutType:"RESPONSIVE"',
 			},
 			{
-				match: /[\w_+]===\w+\.\w+\.MOSAIC/,
-				replace: "true",
-			},
-			{
-				match: /null!==\(\w+=\w+\.get\(\w+\)\)&&void 0!==\w+\?\w+:"INVALID"/,
+				match: /null!==\(\w+=\w+\.get\(\w+\)\)&&void 0!==\w+\?\w+:"INVALID"/, //377502
 				replace: '"INVALID"',
 			},
+		],
+	},
+  {
+		find: ".MediaLayoutType.MOSAIC",
+		replacements: [
 			{
-				match: /\w+\.length>1/,
+				match: /[\w_+]===\w+\.\w+\.MOSAIC/, //933629 594098
+				replace: "true",
+			},
+		],
+	},
+  {
+		find: "Media Mosaic",
+		replacements: [
+			{
+				match: /\w+\.length>1/, //723931
 				replace: "false",
 			},
 		],
