@@ -17,7 +17,7 @@ export default [
 		],
 	},
   {
-		find: ".MediaLayoutType.MOSAIC",
+		find: ".downloadHoverButtonIcon",
 		replacements: [
 			{
 				match: /[\w_+]===\w+\.\w+\.MOSAIC/, //933629 594098
