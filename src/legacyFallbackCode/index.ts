@@ -1,3 +1,7 @@
+/*
+	(!) Note to future potential users of this code: Class names will need to be changed. Some of them will end with _ as of October 2023's Discord code restructure.
+*/
+
 import replugged from "replugged";
 import "./style.css";
 
