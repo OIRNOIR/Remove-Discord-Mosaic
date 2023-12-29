@@ -21,15 +21,15 @@
   "author": "OIRNOIR",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.8.10",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
-    "eslint": "^8.52.0",
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
     "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.33.2",
-    "prettier": "^3.0.3",
-    "replugged": "^4.7.5",
-    "typescript": "^5.2.2"
+    "prettier": "^3.1.1",
+    "replugged": "^4.7.7",
+    "typescript": "^5.3.3"
   }
 }
