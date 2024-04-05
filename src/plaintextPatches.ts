@@ -8,7 +8,7 @@ export default [
 		replacements: [
 			{
 				match: /mediaLayoutType:\w+\.\w+\.MOSAIC/, //377502
-				replace: 'mediaLayoutType:"RESPONSIVE"',
+				replace: 'mediaLayoutType:replugged.plugins.getExports("dev.oirnoir.RemoveDiscordMosaic")?.cfg?.get?.("static", false) ? "STATIC" : "RESPONSIVE"',
 			},
 			{
 				match: /null!==\(\w+=\w+\.get\(\w+\)\)&&void 0!==\w+\?\w+:"INVALID"/, //377502
