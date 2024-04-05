@@ -1,4 +1,4 @@
-import { PlaintextPatch } from "replugged/dist/types";
+import type { PlaintextPatch } from "replugged/dist/types";
 
 // By loneweeb.tsx
 
@@ -8,7 +8,8 @@ export default [
 		replacements: [
 			{
 				match: /mediaLayoutType:\w+\.\w+\.MOSAIC/, //377502
-				replace: 'mediaLayoutType:replugged.plugins.getExports("dev.oirnoir.RemoveDiscordMosaic")?.cfg?.get?.("static", false) ? "STATIC" : "RESPONSIVE"',
+				replace:
+					'mediaLayoutType:replugged.plugins.getExports("dev.oirnoir.RemoveDiscordMosaic")?.cfg?.get?.("static", false) ? "STATIC" : "RESPONSIVE"',
 			},
 			{
 				match: /null!==\(\w+=\w+\.get\(\w+\)\)&&void 0!==\w+\?\w+:"INVALID"/, //377502
@@ -16,7 +17,7 @@ export default [
 			},
 		],
 	},
-    {
+	{
 		find: ".downloadHoverButtonIcon",
 		replacements: [
 			{
@@ -25,7 +26,7 @@ export default [
 			},
 		],
 	},
-    {
+	{
 		find: "Media Mosaic",
 		replacements: [
 			{

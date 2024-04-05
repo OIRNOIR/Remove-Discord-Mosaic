@@ -11,15 +11,16 @@
 }
 
 [class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup] {
-	position: absolute;   
+	position: absolute;
 	align-self: normal;
 	max-height: 32px;
 	max-width: 65px;
 }
 
-[class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup]:has(>:nth-child( n + 2 )) {
+[class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup]:has(>:nth-child(n + 2)) {
 	right: 6px;
 }
-[class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup]:not(:has(>:nth-child( n + 2 ))) {
+
+[class^=nonMediaAttachmentsContainer] [class^=hoverButtonGroup]:not(:has(>:nth-child(n + 2))) {
 	right: 4px;
 }
