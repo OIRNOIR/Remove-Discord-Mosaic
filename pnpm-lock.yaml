@@ -8,9 +8,6 @@ devDependencies:
   '@biomejs/biome':
     specifier: ^1.6.4
     version: 1.6.4
-  '@types/node':
-    specifier: ^20.12.4
-    version: 20.12.4
   replugged:
     specifier: ^4.7.9
     version: 4.7.9(@codemirror/view@6.26.1)(@lezer/common@1.2.1)
@@ -574,12 +571,6 @@ packages:
 
   /@types/node@18.19.29:
     resolution: {integrity: sha512-5pAX7ggTmWZdhUrhRWLPf+5oM7F80bcKVCBbr0zwEkTNzTJL2CWQjznpFgHYy6GrzkYi2Yjy7DHKoynFxqPV8g==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: true
-
-  /@types/node@20.12.4:
-    resolution: {integrity: sha512-E+Fa9z3wSQpzgYQdYmme5X3OTuejnnTx88A6p6vkkJosR3KBz+HpE3kqNm98VE6cfLFcISx7zW7MsJkH6KwbTw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
