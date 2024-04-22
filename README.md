@@ -6,7 +6,7 @@ Install: https://replugged.dev/store/dev.oirnoir.RemoveDiscordMosaic
 
 Please restart your Discord client after installing.
 
-Some code by teltta and loneweeb.tsx on Discord.
+Some code by teltta and yofukashino_ on Discord.
 
 This plugin has a few bugs and issues, PRs are welcome.
 
