@@ -1,26 +1,25 @@
 import { PlaintextPatch } from "replugged/dist/types";
 
-// By loneweeb.tsx
+// By yofukashino_
 
 export default [
 	{
 		find: ".MEDIA_MOSAIC_MAX_HEIGHT",
 		replacements: [
 			{
-				match: /mediaLayoutType:\w+\.\w+\.MOSAIC/, //377502
+				match: /mediaLayoutType:\w+\.\w+\.MOSAIC/, // 310043
 				replace: 'mediaLayoutType:replugged.plugins.getExports("dev.oirnoir.RemoveDiscordMosaic")?.cfg?.get?.("static", false) ? "STATIC" : "RESPONSIVE"',
 			},
 			{
-				match: /null!==\(\w+=\w+\.get\(\w+\)\)&&void 0!==\w+\?\w+:"INVALID"/, //377502
+				match: /\(0,\w+?\.isImageContentType\)\(\w+?\)\?"IMAGE":\(0,\w+?\.isVideoContentType\)\(\w+?\)\?"VIDEO":"INVALID"/, // 60750
 				replace: '"INVALID"',
 			},
-		],
-	},
-    {
-		find: ".downloadHoverButtonIcon",
-		replacements: [
-			{
-				match: /[\w_+]===\w+\.\w+\.MOSAIC/, // X - 933629 594098  O - 994402
+      {
+				match: /"IMAGE"===\w+\|\|"VIDEO"===\w+?;/, // 60750
+				replace: 'false;',
+			},
+      {
+				match: /[\w_+]===\w+\.\w+\.MOSAIC/, // 69750
 				replace: "true",
 			},
 		],
@@ -29,7 +28,7 @@ export default [
 		find: "Media Mosaic",
 		replacements: [
 			{
-				match: /\w+\.length>1/, //723931
+				match: /\w+\.length>1/, // 12067, 938353
 				replace: "false",
 			},
 		],
