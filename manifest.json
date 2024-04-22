@@ -1,19 +1,19 @@
 {
-  "id": "dev.oirnoir.RemoveDiscordMosaic",
-  "name": "Remove Discord Image Mosaic",
-  "description": "A plugin to remove Discord's new image mosaic",
-  "author": {
-    "name": "OIRNOIR",
-    "discordID": "720842469024989195",
-    "github": "oirnoir"
-  },
-  "version": "1.0.11",
-  "updater": {
-    "type": "store",
-    "id": "dev.oirnoir.RemoveDiscordMosaic"
-  },
-  "license": "MIT",
-  "type": "replugged-plugin",
+	"id": "dev.oirnoir.RemoveDiscordMosaic",
+	"name": "Remove Discord Image Mosaic",
+	"description": "A plugin to remove Discord's new image mosaic",
+	"author": {
+		"name": "OIRNOIR",
+		"discordID": "720842469024989195",
+		"github": "oirnoir"
+	},
+	"version": "1.0.12",
+	"updater": {
+		"type": "store",
+		"id": "dev.oirnoir.RemoveDiscordMosaic"
+	},
+	"license": "MIT",
+	"type": "replugged-plugin",
 	"renderer": "src/index.ts",
 	"plaintextPatches": "src/plaintextPatches.ts",
 	"reloadRequired": true,
