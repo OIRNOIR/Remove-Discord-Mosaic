@@ -20,6 +20,7 @@
 [class*=MediaItemContainer] [class^=hoverButtonGroup]:has(>:nth-child( n + 2 )) {
 	right: 6px;
 }
+
 [class*=MediaItemContainer] [class^=hoverButtonGroup]:not(:has(>:nth-child( n + 2 ))) {
 	right: 4px;
 }

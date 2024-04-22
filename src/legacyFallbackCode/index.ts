@@ -5,7 +5,9 @@
 import replugged from "replugged";
 import "./style.css";
 
-let observer : MutationObserver, observer2 : MutationObserver, observer3 : MutationObserver;
+let observer: MutationObserver;
+let observer2: MutationObserver;
+let observer3: MutationObserver;
 
 let disabled = false;
 
@@ -25,7 +27,7 @@ function onVideoClick(e: MouseEvent) {
 function onCoverClick(e: MouseEvent) {
 	if (!disabled) {
 		e.stopPropagation();
-		const target = (e.target as Element);
+		const target = e.target as Element;
 		console.log((e.target as Element).closest('[class*="wrapperMediaMosaic-"]'));
 		const video = (e.target as Element).closest('[class*="wrapperMediaMosaic-"]')?.querySelector("video");
 		if (video == null) return console.log("Video returned null!");
@@ -41,8 +43,10 @@ function onCoverClick(e: MouseEvent) {
 	}
 }
 
-function fixElement(element : Element) {
-	for (const img of element.querySelectorAll('div[class*="mediaAttachmentsContainer-"] div[class*="imageContainer-"] img')) {
+function fixElement(element: Element) {
+	for (const img of element.querySelectorAll(
+		'div[class*="mediaAttachmentsContainer-"] div[class*="imageContainer-"] img',
+	)) {
 		if (img.getAttribute("rdm-old-params") != null) continue;
 		const src = img.getAttribute("src");
 		if (src == null) continue;
@@ -54,7 +58,9 @@ function fixElement(element : Element) {
 		img.setAttribute("rdm-old-params", srcURL.searchParams.toString());
 		img.setAttribute("src", newSrc);
 	}
-	for (const video of element.querySelectorAll('div[class*="mediaAttachmentsContainer-"] video') as NodeListOf<HTMLVideoElement>) {
+	for (const video of element.querySelectorAll(
+		'div[class*="mediaAttachmentsContainer-"] video',
+	) as NodeListOf<HTMLVideoElement>) {
 		if (video.getAttribute("rdm-old-params") != null) continue;
 		const poster = video.getAttribute("poster");
 		if (poster == null) continue;
@@ -78,21 +84,21 @@ function fixElement(element : Element) {
 }
 
 function unfixAll() {
-	for (const img of document.querySelectorAll('img[rdm-old-params]')) {
+	for (const img of document.querySelectorAll("img[rdm-old-params]")) {
 		const src = img.getAttribute("src");
 		if (src == null) continue;
-		let splitSrc = src.split("?");
-		const newSrc = splitSrc.shift() + `?${img.getAttribute("rdm-old-params")}`;
+		const splitSrc = src.split("?");
+		const newSrc = `${splitSrc.shift()}?${img.getAttribute("rdm-old-params")}`;
 		if (newSrc == null) continue;
 		img.setAttribute("src", newSrc);
 		img.removeAttribute("rdm-old-params");
 		console.log("Unfixed element", img);
 	}
-	for (const video of document.querySelectorAll('video[rdm-old-params]') as NodeListOf<HTMLVideoElement>) {
+	for (const video of document.querySelectorAll("video[rdm-old-params]") as NodeListOf<HTMLVideoElement>) {
 		const poster = video.getAttribute("poster");
 		if (poster == null) continue;
-		let splitPoster = poster.split("?");
-		const newPoster = splitPoster.shift() + `?${video.getAttribute("rdm-old-params")}`;
+		const splitPoster = poster.split("?");
+		const newPoster = `${splitPoster.shift()}?${video.getAttribute("rdm-old-params")}`;
 		if (newPoster == null) continue;
 		video.setAttribute("poster", newPoster);
 		// video.removeEventListener("click", onVideoClick);
@@ -103,15 +109,15 @@ function unfixAll() {
 
 export async function start(): Promise<void> {
 	disabled = false;
-	let start = Date.now();
+	const start = Date.now();
 
 	// JS observer method
-  observer = new MutationObserver((mutationsList, observer) => {
-		[...mutationsList].forEach(mutation => {
+	observer = new MutationObserver((mutationsList, observer) => {
+		for (const mutation of [...mutationsList]) {
 			for (const child of document.querySelectorAll('ol[data-list-id="chat-messages"]')[0].children) {
 				fixElement(child);
 			}
-		});
+		}
 	});
 
 	function reconnect() {
@@ -119,7 +125,7 @@ export async function start(): Promise<void> {
 			observer.observe(document.querySelectorAll('ol[data-list-id="chat-messages"]')[0], {
 				attributes: true,
 				childList: true,
-				subtree: true
+				subtree: true,
 			});
 			console.log("OBSERVING1");
 			for (const child of document.querySelectorAll('ol[data-list-id="chat-messages"]')[0].children) {
@@ -138,16 +144,20 @@ export async function start(): Promise<void> {
 			observer2 = new MutationObserver((mutations) => {
 				for (const m of mutations) {
 					for (const n of m.removedNodes) {
-						if (n instanceof Element && Array.from(n.classList).find(c => c.startsWith("chatContent-")) && n.nodeName == "MAIN") {
+						if (
+							n instanceof Element &&
+							Array.from(n.classList).find((c) => c.startsWith("chatContent-")) &&
+							n.nodeName === "MAIN"
+						) {
 							reconnect();
 						}
 					}
 				}
-			})
+			});
 			observer2.observe(document.querySelectorAll('div[class*="chat-"] > div[class*="content-"]')[0], {
 				attributes: true,
 				childList: true,
-				subtree: true
+				subtree: true,
 			});
 			console.log("OBSERVING2");
 			reconnect();
@@ -164,16 +174,16 @@ export async function start(): Promise<void> {
 			observer3 = new MutationObserver((mutations) => {
 				for (const m of mutations) {
 					for (const n of m.removedNodes) {
-						if (n instanceof Element && Array.from(n.classList).find(c => c.startsWith("chat-")) && n.nodeName == "DIV") {
+						if (n instanceof Element && Array.from(n.classList).find((c) => c.startsWith("chat-")) && n.nodeName === "DIV") {
 							reconnect2();
 						}
 					}
 				}
-			})
+			});
 			observer3.observe(document.querySelectorAll('div[class*="base-"] > div[class*="content-"]')[0], {
 				attributes: true,
 				childList: true,
-				subtree: true
+				subtree: true,
 			});
 			console.log("OBSERVING3");
 			reconnect2();
@@ -192,8 +202,8 @@ export function stop(): void {
 	disabled = true;
 
 	// JS observer method
-  observer.disconnect();
-  observer2.disconnect();
-  observer3.disconnect();
+	observer.disconnect();
+	observer2.disconnect();
+	observer3.disconnect();
 	unfixAll();
 }

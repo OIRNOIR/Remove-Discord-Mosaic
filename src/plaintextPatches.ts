@@ -1,4 +1,4 @@
-import { PlaintextPatch } from "replugged/dist/types";
+import type { PlaintextPatch } from "replugged/dist/types";
 
 // By yofukashino_
 
@@ -24,7 +24,7 @@ export default [
 			},
 		],
 	},
-    {
+	{
 		find: "Media Mosaic",
 		replacements: [
 			{
