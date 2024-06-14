@@ -10,7 +10,7 @@
     "watch": "replugged build plugin --watch",
     "bundle": "replugged bundle plugin",
     "check": "tsc --noEmit",
-    "lint": "biome check . --apply"
+    "lint": "biome check . --write"
   },
   "keywords": [],
   "author": "OIRNOIR",
