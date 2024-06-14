@@ -2,7 +2,7 @@
 	By yofukashino_
 */
 
-[class*=MediaItemContainer] [class*=mosaicItem]:not(:has([class*=textContainer])) {
+[class*=MediaItemContainer] [class*=mosaicItem]:has(> [class^=hoverButtonGroup]) {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
