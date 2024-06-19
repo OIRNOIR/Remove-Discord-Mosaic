@@ -12,8 +12,8 @@ importers:
         specifier: ^1.8.1
         version: 1.8.1
       replugged:
-        specifier: ^4.7.10
-        version: 4.7.10(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
+        specifier: ^4.7.13
+        version: 4.7.13(@codemirror/view@6.28.1)(@lezer/common@1.2.1)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -473,8 +473,8 @@ packages:
   '@types/http-cache-semantics@4.0.4':
     resolution: {integrity: sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==}
 
-  '@types/node@18.19.34':
-    resolution: {integrity: sha512-eXF4pfBNV5DAMKGbI02NnDtWrQ40hAN558/2vvS4gMpMIxaf6JmD7YjnZbq0Q9TDSSkKBamime8ewRoomHdt4g==}
+  '@types/node@18.19.36':
+    resolution: {integrity: sha512-tX1BNmYSWEvViftB26VLNxT6mEr37M7+ldUtq7rlKnv4/2fKYsJIOmqJAjT6h1DNuwQjIKgw3VJ/Dtw3yiTIQw==}
 
   adm-zip@0.5.14:
     resolution: {integrity: sha512-DnyqqifT4Jrcvb8USYjp6FHtBpEIz1mnXu6pTRHZ0RL69LbQYiO+0lDFg5+OKA7U29oWSs3a/i8fhn8ZcceIWg==}
@@ -897,8 +897,8 @@ packages:
     resolution: {integrity: sha512-+crtS5QjFRqFCoQmvGduwYWEBng99ZvmFvF+cUJkGYF1L1BfU8C6Zp9T7f5vPAwyLkUExpvK+ANVZmGU49qi4Q==}
     engines: {node: '>=12'}
 
-  replugged@4.7.10:
-    resolution: {integrity: sha512-SPJwKWUZ6DCrdb7XBsbrhXSQmajOLVVxVB0LNAwHIR2tv3C+3pV8fbl8MaRLXU737BxJT+bnvRyaZwiY0EkOqw==}
+  replugged@4.7.13:
+    resolution: {integrity: sha512-SZn3N5hNX19dzCHpOFUqyXnZoAyZoOYlq8zlY4b5Iq0xy+t+QKPM1TMO4gN1Tb/8l8IS7zb8pDrE1A561PYeLQ==}
     engines: {node: '>=21.0.0', pnpm: '>=9.0.0'}
     hasBin: true
 
@@ -920,8 +920,8 @@ packages:
     resolution: {integrity: sha512-40yHxbNcl2+rzXvZuVkrYohathsSJlMTXKryG5y8uciHv1+xDLHQpgjG64JUO9nrEq2jGLH6IZ8BcZyw3wrweg==}
     engines: {node: '>=14.16'}
 
-  sass@1.77.5:
-    resolution: {integrity: sha512-oDfX1mukIlxacPdQqNb6mV2tVCrnE+P3nVYioy72V5tlk56CPNcO4TCuFcaCRKKfJ1M3lH95CleRS+dVKL2qMg==}
+  sass@1.77.6:
+    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -978,8 +978,8 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  tsx@4.15.4:
-    resolution: {integrity: sha512-d++FLCwJLrXaBFtRcqdPBzu6FiVOJ2j+UsvUZPtoTrnYtCGU5CEW7iHXtNZfA2fcRTvJFWPqA6SWBuB0GSva9w==}
+  tsx@4.15.6:
+    resolution: {integrity: sha512-is0VQQlfNZRHEuSSTKA6m4xw74IU4AizmuB6lAYLRt9XtuyeQnyJYexhNZOPCB59SqC4JzmSzPnHGBXxf3k0hA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1038,8 +1038,8 @@ packages:
   write-file-atomic@3.0.3:
     resolution: {integrity: sha512-AvHcyZ5JnSfq3ioSyjrBkH9yW4m7Ayk8/9My/DD9onKeu/94fwrMocemO2QAJFAlnnDN+ZDS+ZjAR5ua1/PV/Q==}
 
-  ws@8.17.0:
-    resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
+  ws@8.17.1:
+    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -1409,7 +1409,7 @@ snapshots:
 
   '@types/http-cache-semantics@4.0.4': {}
 
-  '@types/node@18.19.34':
+  '@types/node@18.19.36':
     dependencies:
       undici-types: 5.26.5
 
@@ -1565,7 +1565,7 @@ snapshots:
     dependencies:
       esbuild: 0.19.12
       resolve: 1.22.8
-      sass: 1.77.5
+      sass: 1.77.6
 
   esbuild@0.19.12:
     optionalDependencies:
@@ -1844,7 +1844,7 @@ snapshots:
     dependencies:
       rc: 1.2.8
 
-  replugged@4.7.10(@codemirror/view@6.28.1)(@lezer/common@1.2.1):
+  replugged@4.7.13(@codemirror/view@6.28.1)(@lezer/common@1.2.1):
     dependencies:
       '@codemirror/lang-css': 6.2.1(@codemirror/view@6.28.1)
       '@codemirror/language': 6.10.2
@@ -1863,9 +1863,9 @@ snapshots:
       prompts: 2.4.2
       semver: 7.6.2
       standalone-electron-types: 1.0.0
-      tsx: 4.15.4
+      tsx: 4.15.6
       update-notifier: 6.0.2
-      ws: 8.17.0
+      ws: 8.17.1
       yargs: 17.7.2
       zod: 3.23.8
     transitivePeerDependencies:
@@ -1890,7 +1890,7 @@ snapshots:
     dependencies:
       lowercase-keys: 3.0.0
 
-  sass@1.77.5:
+  sass@1.77.6:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.6
@@ -1910,7 +1910,7 @@ snapshots:
 
   standalone-electron-types@1.0.0:
     dependencies:
-      '@types/node': 18.19.34
+      '@types/node': 18.19.36
 
   string-width@4.2.3:
     dependencies:
@@ -1942,7 +1942,7 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  tsx@4.15.4:
+  tsx@4.15.6:
     dependencies:
       esbuild: 0.21.5
       get-tsconfig: 4.7.5
@@ -2013,7 +2013,7 @@ snapshots:
       signal-exit: 3.0.7
       typedarray-to-buffer: 3.1.5
 
-  ws@8.17.0: {}
+  ws@8.17.1: {}
 
   xdg-basedir@5.1.0: {}
 
