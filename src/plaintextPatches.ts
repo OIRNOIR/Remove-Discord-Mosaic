@@ -4,7 +4,7 @@ import type { PlaintextPatch } from "replugged/dist/types";
 
 export default [
 	{
-		find: ".MEDIA_MOSAIC_MAX_HEIGHT",
+		find: "mp3|m4a|ogg|wav|flac",
 		replacements: [
 			{
 				match: /mediaLayoutType:\w+\.\w+\.MOSAIC/, // 310043
@@ -12,7 +12,7 @@ export default [
 					'mediaLayoutType:replugged.plugins.getExports("dev.oirnoir.RemoveDiscordMosaic")?.cfg?.get?.("static", false) ? "STATIC" : "RESPONSIVE"',
 			},
 			{
-				match: /\(0,\w+?\.isImageContentType\)\(\w+?\)\?"IMAGE":\(0,\w+?\.isVideoContentType\)\(\w+?\)\?"VIDEO":"INVALID"/, // 60750
+				match: /\(0,\w+?\.\w+?\)\(\w+?\)\?"IMAGE":\(0,\w+?\.\w+?\)\(\w+?\)\?"VIDEO":"INVALID"/, // 60750
 				replace: '"INVALID"',
 			},
 			{
