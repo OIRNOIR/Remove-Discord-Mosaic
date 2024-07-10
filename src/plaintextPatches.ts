@@ -1,4 +1,4 @@
-import type { PlaintextPatch } from "replugged/dist/types";
+import type { PlaintextPatch } from "replugged/types";
 
 // By yofukashino_
 
