@@ -2,6 +2,7 @@
 	By yofukashino_
 */
 
+[class*=MediaItemContainer] [class*=mosaicItem]:has(> div > [class^=hoverButtonGroup]),
 [class*=MediaItemContainer] [class*=mosaicItem]:has(> [class^=hoverButtonGroup]) {
 	display: flex;
 	flex-wrap: wrap;

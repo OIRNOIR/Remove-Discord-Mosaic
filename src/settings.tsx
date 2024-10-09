@@ -12,6 +12,8 @@ export const Settings = () => {
 			>
 				Static Size
 			</SwitchItem>
+			<SwitchItem 	note="Use the left and right arrow keys to easily browse through multiple images within the same message."
+				{...util.useSetting(cfg, "nav", false)}>Image Navigation</SwitchItem>
 		</>
 	);
 };
