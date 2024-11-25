@@ -6,21 +6,20 @@
 	Code derived from a snippet by teltta on Discord
 */
 
-[class*="ByOneGrid-"]
-
+[class*="ByOneGrid-"],
 /*:not([class*="OneGridSingle-"])*/
-,
-[class*="ByTwoGrid-"],
+	[class*="ByTwoGrid-"],
 [class*="ByThreeGrid-"] {
 	display: flex;
 	flex-direction: column;
 	max-height: 100%;
 }
 
-html body div[class*="ByOneGrid-"]
-
-/*:not([class*="OneGridSingle-"])*/
-img[class*="lazyImg"],
+html
+	body
+	div[class*="ByOneGrid-"]
+	/*:not([class*="OneGridSingle-"])*/
+	img[class*="lazyImg"],
 html body div[class*="ByTwoGrid-"] img[class*="lazyImg"],
 html body div[class*="ByThreeGrid-"] img[class*="lazyImg"] {
 	aspect-ratio: unset;
@@ -31,10 +30,11 @@ html body div[class*="ByThreeGrid-"] img[class*="lazyImg"] {
 	max-width: 100% !important;
 }
 
-html body div[class*="ByOneGrid-"]
-
-/*:not([class*="OneGridSingle-"])*/
-[class*="video-"]:not([data-fullscreen="true"] *),
+html
+	body
+	div[class*="ByOneGrid-"]
+	/*:not([class*="OneGridSingle-"])*/
+	[class*="video-"]:not([data-fullscreen="true"] *),
 html body div[class*="ByTwoGrid-"] [class*="video-"]:not([data-fullscreen="true"] *),
 html body div[class*="ByThreeGrid-"] [class*="video-"]:not([data-fullscreen="true"] *) {
 	aspect-ratio: unset;
@@ -79,9 +79,18 @@ html body div[class*="ByThreeGrid-"] [class*="video-"]:not([data-fullscreen="tru
 	aspect-ratio: unset;
 }
 
-[class*="ByOneGrid-"] *:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not([class*="messageAttachmentMediaMosaic-"]),
-[class*="ByTwoGrid-"] *:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not([class*="messageAttachmentMediaMosaic-"]),
-[class*="ByThreeGrid-"] *:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not([class*="messageAttachmentMediaMosaic-"]) {
+[class*="ByOneGrid-"]
+	*:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not(
+		[class*="messageAttachmentMediaMosaic-"]
+	),
+[class*="ByTwoGrid-"]
+	*:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not(
+		[class*="messageAttachmentMediaMosaic-"]
+	),
+[class*="ByThreeGrid-"]
+	*:not(div[class*="wrapperMediaMosaic-"] *):not([class*="wrapperMediaMosaic-"]):not(img[class*="lazyImg-"]):not(
+		[class*="messageAttachmentMediaMosaic-"]
+	) {
 	width: unset !important;
 	height: unset !important;
 	max-width: unset !important;

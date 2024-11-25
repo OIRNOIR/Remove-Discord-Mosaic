@@ -9,13 +9,13 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9.3
+        specifier: ^1.9.4
         version: 1.9.4
       replugged:
-        specifier: ^4.8.1
+        specifier: ^4.8.3
         version: 4.8.3(@codemirror/view@6.35.0)(@lezer/common@1.2.3)(sass-embedded@1.81.0)
       typescript:
-        specifier: ^5.6.3
+        specifier: ^5.7.2
         version: 5.7.2
 
 packages:
@@ -504,8 +504,8 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
-  '@types/node@18.19.65':
-    resolution: {integrity: sha512-Ay5BZuO1UkTmVHzZJNvZKw/E+iB3GQABb6kijEz89w2JrfhNA+M/ebp18pfz9Gqe9ywhMC8AA8yC01lZq48J+Q==}
+  '@types/node@18.19.66':
+    resolution: {integrity: sha512-14HmtUdGxFUalGRfLLn9Gc1oNWvWh5zNbsyOLo5JV6WARSeN1QcEBKRnZm9QqNfrutgsl/hY4eJW63aZ44aBCg==}
 
   adm-zip@0.5.16:
     resolution: {integrity: sha512-TGw5yVi4saajsSEgz25grObGHEUaDrniwvA2qwSC060KfqGPdglhvPMA2lPIoxs3PQIItj2iag35fONcQqgUaQ==}
@@ -1438,7 +1438,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@types/node@18.19.65':
+  '@types/node@18.19.66':
     dependencies:
       undici-types: 5.26.5
 
@@ -1925,7 +1925,7 @@ snapshots:
 
   standalone-electron-types@1.0.0:
     dependencies:
-      '@types/node': 18.19.65
+      '@types/node': 18.19.66
 
   string-width@4.2.3:
     dependencies:
