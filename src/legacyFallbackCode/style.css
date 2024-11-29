@@ -15,11 +15,7 @@
 	max-height: 100%;
 }
 
-html
-	body
-	div[class*="ByOneGrid-"]
-	/*:not([class*="OneGridSingle-"])*/
-	img[class*="lazyImg"],
+html body div[class*="ByOneGrid-"] /*:not([class*="OneGridSingle-"])*/ img[class*="lazyImg"],
 html body div[class*="ByTwoGrid-"] img[class*="lazyImg"],
 html body div[class*="ByThreeGrid-"] img[class*="lazyImg"] {
 	aspect-ratio: unset;
@@ -32,8 +28,7 @@ html body div[class*="ByThreeGrid-"] img[class*="lazyImg"] {
 
 html
 	body
-	div[class*="ByOneGrid-"]
-	/*:not([class*="OneGridSingle-"])*/
+	div[class*="ByOneGrid-"] /*:not([class*="OneGridSingle-"])*/
 	[class*="video-"]:not([data-fullscreen="true"] *),
 html body div[class*="ByTwoGrid-"] [class*="video-"]:not([data-fullscreen="true"] *),
 html body div[class*="ByThreeGrid-"] [class*="video-"]:not([data-fullscreen="true"] *) {
