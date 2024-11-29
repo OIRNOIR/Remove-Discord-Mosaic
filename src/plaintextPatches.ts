@@ -34,6 +34,10 @@ export default [
 		find: "MediaMosaicItem",
 		replacements: [
 			{
+				match: /\.\.\.\w+!==\w+\.\w+\.MOSAIC/,
+				replace: '...!["IMAGE","VIDEO"].includes(arguments?.[0]?.type)',
+			},
+			{
 				match: /[\w_+]===\w+\.\w+\.MOSAIC/, // 546432
 				replace: "true",
 			},
